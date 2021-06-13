@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7_54&di2lpj1)27)a!)p=z-tu7d+-2u-ce$y^z60ursv8(u@66'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://login-intern-task.herokuapp.com/index','localhost','127.0.0.1']
 
 
 # Application definition
@@ -39,10 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'App',
     'django.contrib.sites',
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
 ]
 
 MIDDLEWARE = [
@@ -134,15 +130,8 @@ AUTHENTICATION_BACKENDS = [
 
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ],
-}
 
 STATIC_URL = '/static/'
 
-SITE_ID = 1
-
-LOGIN_REDIRECT_URL = '/'
 django_heroku.settings(locals())
+STATIC_ROOT = os.path.join(BASE_DIR, ‘static’)
