@@ -4,7 +4,6 @@ django-crispy-forms==1.9.2
 django-heroku==0.3.1
 filelock==3.0.12
 Flask==1.1.2
-freeze==3.0
 gitignore==0.0.8
 gunicorn==20.0.4
 Pillow==7.2.0
