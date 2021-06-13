@@ -141,7 +141,8 @@ REST_FRAMEWORK = {
 }
 
 STATIC_URL = '/static/'
-django_heroku.settings(locals())
+
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
+django_heroku.settings(locals())
